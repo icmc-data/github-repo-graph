@@ -5,7 +5,7 @@ Transformar o github num grafo, realizar processos de aprendizado e exploração
 .
 ├── data/               <- dataset
 │   
-└── scrapping/
+└── scraping/
     ├── features/       <- scrapping das features
     └── network/        <- scrapping da rede(dependências e dependentes)
 ```
