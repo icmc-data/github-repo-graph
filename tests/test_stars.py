@@ -1,17 +1,10 @@
-import argparse
-from scraping.features.stars import getNumberOfStars
-
-def setup():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("-t", "--token", help="OAuth token from GitHub", required=True)
-    args = parser.parse_args()
-    return args
-
+from data.features.stars import getNumberOfStars
+import os
+import dotenv
 
 def main():
-    args = setup()
-    authToken = args.token
-    print(authToken)
+    dotenv.load_dotenv()
+    authToken = os.environ.get('GITHUB_TOKEN')
 
     urls = ["tensorflow/tensorflow", "keras-team/keras", "pytorch/pytorch"]
     for repoURL in urls:
