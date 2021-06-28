@@ -5,11 +5,11 @@
 
 <script src='https://d3js.org/d3.v5.min.js'></script>
 <script>
-var width = 1*800;
-var height = 1*600;
+var width = 2*800;
+var height = 2*600;
 var color = d3.scaleOrdinal(d3.schemeCategory10);
 
-d3.json("data/json/graph.json").then(function(graph) {
+d3.json("data/json/depth2.json").then(function(graph) {
 
 var label = {
     'nodes': [],

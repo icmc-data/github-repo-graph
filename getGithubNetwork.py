@@ -24,7 +24,7 @@ def main():
 	jsonGraph = git.modelGithubRepoGraph(owner, name, depth = args.depth)
 
 	jsonGraph = open("data/json/{}".format(args.out), "w")
-	json.dump(git.json, jsonGraph)
+	json.dump(git.json, jsonGraph, indent=4)
 	jsonGraph.close()
 
 if __name__ == '__main__':

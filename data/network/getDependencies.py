@@ -75,7 +75,7 @@ class GithubGraph:
 					"value": 1}
 				)
 
-				if ((len(self.neighbors) + 1 < depth or depth == 0)):
+				if ((len(self.neighbors) + 1 < depth or depth == 0) and dependencie['hasDependencies'] == True):
 					if label not in self.neighbors:
 						self.neighbors.append(label)
 						self.getDependencies(
