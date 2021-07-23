@@ -3,7 +3,7 @@ import dotenv
 import json
 import argparse
 
-from data.network.getDependencies import *
+from make.network.getDependencies import *
 
 def setup():
 	parser = argparse.ArgumentParser(description = 'Get Github network from a given repository, using Github GraphQL API')
@@ -23,7 +23,7 @@ def main():
 	owner, name = args.repository.split('/')
 	jsonGraph = git.modelGithubRepoGraph(owner, name, depth = args.depth)
 
-	jsonGraph = open("data/json/{}".format(args.out), "w")
+	jsonGraph = open("dataset/json/{}".format(args.out), "w")
 	json.dump(git.json, jsonGraph, indent=4)
 	jsonGraph.close()
 

@@ -3,8 +3,10 @@ Transformar o github num grafo, realizar processos de aprendizado e exploração
 
 ```
 .
-│   
-└── data/
+│
+├── dataset/
+|    └── json/          <- network as json files
+└── make/
     ├── features/       <- obtenção das features
     └── network/        <- obtenção da rede(dependências e dependentes)
 ```

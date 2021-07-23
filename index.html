@@ -81,47 +81,6 @@ var node = container.append("g").attr("class", "nodes")
 
 node.on("mouseover", focus).on("mouseout", unfocus);
 
-/*
-var tip;
-node.on("click", function(d){
-    if (tip) tip.remove();
-
-    tip  = svg.append("g")
-      .attr("transform", "translate(" + d.x  + "," + d.y + ")");
-
-    var rect = tip.append("rect")
-      .style("fill", "white")
-      .style("stroke", "steelblue");
-
-    tip.append("text")
-      .text("Name: " + d.id)
-      .attr("dy", "1em")
-      .attr("x", 5);
-
-    tip.append("text")
-      .text("Info: " + d.info)
-      .attr("dy", "2em")
-      .attr("x", 5);
-
-    var con = graph.links
-      .filter(function(d1){
-        return d1.source.id === d.id;
-      })
-      .map(function(d1){
-        return d1.target.id;
-      })
-
-    tip.append("text")
-      .text("Connected to: " + con.join(","))
-      .attr("dy", "3em")
-      .attr("x", 5);
-
-    var bbox = tip.node().getBBox();
-    rect.attr("width", bbox.width + 5)
-        .attr("height", bbox.height + 5)
-  });
-*/
-
 node.call(
     d3.drag()
         .on("start", dragstarted)
