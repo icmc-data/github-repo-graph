@@ -96,7 +96,7 @@ class GithubGraph:
 		if resp.status_code == 200:
 			return resp.json()
 		else:
-			raise Exception("Falha na query. Retornou erro de código {}. Query: \n".format(resp.status_code, query))
+			raise Exception("Falha na query. Retornou erro de código {}. Query: {}\n".format(resp.status_code, query))
 	
 	def modelGithubRepoGraph(self, owner, name, depth = 1):
 		self.json['nodes'].append(
