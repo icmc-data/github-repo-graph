@@ -7,7 +7,6 @@ def main():
 
 	with open(JSON_PATH + 'depth2.json') as f:
 		json_data = json.load(f)
-		f.close()
 
 	G = nx.DiGraph()
 	G.add_nodes_from(
@@ -29,11 +28,6 @@ def main():
 	for i, node in enumerate(sorted_nodes[:10]):
 		print("{}) {} - score {}".format(i+1, node, centralities[node]))
 
-	# print('\n\nEigenVector Centrality:')
-	# centralities = nx.eigenvector_centrality(G)
-	# sorted_nodes = sorted(centralities, key = centralities.get, reverse=True)
-	# for i, node in enumerate(sorted_nodes[:10]):
-	# 	print("{}) {} - score {}".format(i+1, node, centralities[node]))
 
 
 if __name__ == '__main__':

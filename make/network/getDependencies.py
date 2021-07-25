@@ -59,25 +59,26 @@ class GithubGraph:
 
 				seen.add(dependencie['packageName'])
 
-				target = '{}/{}'.format(
+				source = '{}/{}'.format(
 					dependencie['repository']['owner']['login'],
 					dependencie['repository']['name']
 				)
 
-				if (target not in self.vertices):
+				if (source not in self.vertices):
 					self.json['nodes'].append(
-						{"id": target}
+						{"id": source}
 					)
-					self.vertices.append(target)
+					self.vertices.append(source)
+
 				self.json['links'].append(
-					{"source": target, 
+					{"source": source, 
 					"target": "{}/{}".format(owner, name),
 					"value": 1}
 				)
 
 				if ((len(self.neighbors) + 1 < depth or depth == 0) and dependencie['hasDependencies'] == True):
-					if target not in self.neighbors:
-						self.neighbors.append(target)
+					if source not in self.neighbors:
+						self.neighbors.append(source)
 						self.getDependencies(
 							dependencie['repository']['owner']['login'],
 							dependencie['repository']['name'],
