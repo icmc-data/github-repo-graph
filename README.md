@@ -7,6 +7,9 @@ Transformar o github num grafo, realizar processos de aprendizado e exploração
 ├── dataset/
 |    ├── sqlite/        <- sqlite github database
 |    └── json/          <- network as json files
+|
+├── notebooks/          <- Jupyter notebooks
+|          
 └── make/
     ├── features/       <- features getter
     └── network/        <- network getter (dependencies)
@@ -56,3 +59,7 @@ The Json file will be availabe at `dataset/json/` directory.
 ### D3.js Visualization
 
 D3.js was used to view a sample of the network. You can see [here](https://bl.ocks.org/AlvaroJoseLopes/a93e54ea8e61380d3cba9ea52a9e6e08) or opening `index.html` on a local host.
+
+### EDA
+
+The `notebooks/` contains some jupyter notebooks with some Exploratory Data Analysis.
