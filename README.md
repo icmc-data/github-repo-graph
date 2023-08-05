@@ -1,5 +1,5 @@
 # github-repo-graph
-Transformar o github num grafo, realizar processos de aprendizado e exploração e, posteriormente, visualização.
+Transform the dependency relationships between repositories into a graph and then perform exploratory data analysis and visualization. See this [blogpost](https://mostra-de-projetos-data.netlify.app/#popup-github-graph), in portuguese, for more details.
 
 ```
 .
@@ -52,7 +52,7 @@ $ python3 getNetworkFromSqlite.py -db [DATABASE_NAME] -s [MINIMUM_STARS] -o [JSO
 
 This script fetch a network from **dependents** table and convert it to a JSON file. The `--stars` parameter indicates the minimum number of stars that a repository must have in order to be added to the network.
 
-If you five `--stars 0`, then the script will add all repositories to the network.
+If you provide `--stars 0`, then the script will add all repositories to the network.
 
 The Json file will be availabe at `dataset/json/` directory.
 
